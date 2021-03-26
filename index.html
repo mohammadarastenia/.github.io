@@ -199,5 +199,42 @@
 	<p class="comment">
 		At the end ,the worth thing that can happen for a project that have multiple Participant on it, is Conflict betwaen two commit. this happen when you  corect a line in project and your partner correct same line with other way. your frind upload it changes. when you want to upload your repo, git crashes. because your change has conflict with now existing repo. In this position first step for you is <font color="#000000"> <b>git pull</b> </font> to recieve changes.git now reporting all wrong and you can see where conflict happen. <font color="#000000"> <b>git status</b> </font> can suggest you good solution.at last you should open conflicted file and edit them.for never seeing this conflict we suggest you when working on multi user project never Postponing your commit and immediately push it to your repo to this conflict not happen.
 	</p>
+<! -- ----------------------------------------------------------------------------------------------------------------->
+	<hr class="line">
+	<h2 class="Season">How sign your commit with PGP method </h2>
+	<p class="comment">
+		At this time we are ready to sign our commit. we use GNU PGP or GPG. After you install gpg you can genarate key by using following command
+	</p>
+	<p class="command">
+		1-gpg --gen-key
+	</p>
+	<p class="comment">
+		Type your name,email an 'o' to confirm everythings is true and a password cause generating pair of public and private keys that can be seen by:
+	</p>
+	<p class="command">
+		2-gpg --list-keys
+	</p>
+	<p class="comment">
+		It's time to set your secret key for git, to do this first:
+	</p>
+	<p class="command">
+		3-gpg  --edit-key &lt;Email&gt;
+	</p>
+	<img src="image/pgp_sec.png" name="Image1" alt="gpg secret" align="bottom" width="80%" class="image" />
+	<p class="comment">
+		Copy the Secret key part. and write save and press Enter to Exit. to set it for git use following comand:
+	</p>
+	<p class="command">
+		4-git config --global user.signingkey &lt;Secret key&gt;
+	</p>
+	<p class="comment">
+		After saving commit you can sign it by: 
+	</p>
+	<p class="command">
+		5-&quot;git tag -s &lt;version&gt; -m &lt;comment&gt; &quot;
+	</p>
+	<p class="comment">
+		for being confident use &lt;git show 'version'&gt; or &lt;git tag -v 'version'&gt;
+	</p>
 	</body>
 </html>
