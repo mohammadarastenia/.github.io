@@ -107,10 +107,16 @@
 		13-&quot;git tag -a &lt;version&gt; &lt;some characters of commit hash&gt; &quot;
 	</p>
 	<p class="comment">To
+		to remove a tag
+	</p>
+	<p class="command">
+		14-git tag -d &lt;version&gt;
+	</p>
+	<p class="comment">To
 		to see all tag
 	</p>
 	<p class="command">
-		14-git tag
+		15-git tag
 	</p>
 	<! -- --------------------------------------------------------------------------------------------->
 	<hr class="line">
@@ -182,19 +188,19 @@
 		repository remotly. first step is to define your remote for git as an orgin by using:
 	</p>
 	<p class="command">
-		1.1-git remote add orgin &lt;URL of your repo&gt;
+		<font color="red">1.1</font>-git remote add orgin &lt;URL of your repo&gt;
 	</p>
 	<p class="comment">
 		Now following command say you what is your remote
 	</p>
 	<p class="command">
-		1.2-git remote
+		<font color="red">1.2</font>-git remote
 	</p>
 	<p class="comment">
 		After complete your work. following command upload your work, if every things is true.
 	</p>
 	<p class="command">
-		2.1-git push -u orgin master
+		<font color="red">2.1</font>-git push -u orgin master
 	</p>
 	<p class="comment">
 		At the end ,the worth thing that can happen for a project that have multiple Participant on it, is Conflict betwaen two commit. this happen when you  corect a line in project and your partner correct same line with other way. your frind upload it changes. when you want to upload your repo, git crashes. because your change has conflict with now existing repo. In this position first step for you is <font color="#000000"> <b>git pull</b> </font> to recieve changes.git now reporting all wrong and you can see where conflict happen. <font color="#000000"> <b>git status</b> </font> can suggest you good solution.at last you should open conflicted file and edit them.for never seeing this conflict we suggest you when working on multi user project never Postponing your commit and immediately push it to your repo to this conflict not happen.
